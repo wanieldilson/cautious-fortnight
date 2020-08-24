@@ -1,7 +1,6 @@
 #! python3
 # Timesheet Timesaver #
-# Edit the variable MyRangeStart and MyRangeEnd with the start and finish rows for your position on the time sheet #
-# then edit your times in, out and your lunch #
+# Edit your times in, out and your lunch #
 
 # Keep your times in double quotes
 timein = "7:30"
@@ -17,6 +16,7 @@ import datetime
 # Pull username
 username = getpass.getuser()
 
+# Edit the below to match user# to usernames of those in your team (check the spreadsheet for reference)
 if username == "user1":
     MyRangeStart = 144
     MyRangeEnd = 154
@@ -52,7 +52,7 @@ from pathlib import Path
 last_monday = today - datetime.timedelta(days=today.weekday())
 monday = (last_monday.strftime('%d%m%Y') + ".xlsx")
 
-# Define the folder path and filename.
+# Define the folder path and filename, I think i could have just used an r string here...
 folder = Path("S:/Shared/IT Team/Attendance/IT/")
 filename = folder / monday
 
