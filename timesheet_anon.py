@@ -53,7 +53,7 @@ last_monday = today - datetime.timedelta(days=today.weekday())
 monday = (last_monday.strftime('%d%m%Y') + ".xlsx")
 
 # Define the folder path and filename.
-folder = Path("R:/_New Structure2/IT Team/Attend/IT/")
+folder = Path("S:/Shared/IT Team/Attendance/IT/")
 filename = folder / monday
 
 wb = load_workbook(filename)
